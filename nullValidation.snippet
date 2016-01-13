@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Null validation.</Title>
+            <Author>Gaby Kotliar</Author>
+            <Description>Null parameter validation.</Description>
+            <Shortcut>notnull</Shortcut>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal Editable="true">
+                    <ID>parameter</ID>
+                    <ToolTip>Replace with the parameter name.</ToolTip>
+                    <Default>myParameter</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="CSharp" Kind="method body">
+                <![CDATA[if ($parameter$ == null) throw new ArgumentNullException(nameof($parameter$));]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
